@@ -1,0 +1,110 @@
+
+*{
+  box-sizing: border-box;
+}
+html{
+ font-size:10px;
+}
+body{
+  font-style: italic;
+  
+  font-weight: bold;
+  margin: 0;
+  background: #222;
+}
+.container1{
+  width:80%;
+  margin:0 auto;
+  height: 8rem;
+  
+}
+.container{
+  background: white;
+  color:black;
+  height:100vh;
+}
+header{
+  background: rgb(151, 174, 151);
+  padding:auto;
+ 
+  
+}
+header::after
+{
+  content:'';
+  display:table;
+  clear:both;
+}
+.logo{
+  margin-top:.7rem;
+  float:left;
+  height:6rem;
+  border-radius: 15%;
+}
+nav{
+  float:right;
+}
+nav ul{
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+nav li{
+  margin-top: 2.4rem;
+  padding: 1rem;;
+  display:inline-block;
+  font-size: 1.5rem;
+  margin-left:7rem;
+}
+nav a {
+  color:#444;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+button{
+  border:transparent;
+  border-radius: .2rem;
+  background: rgb(154, 176, 154);
+  color:rgb(79, 29, 29);
+}
+.co12{
+  
+  text-align: center;
+  font-size: 3rem;
+  margin-right: 25rem;
+  width: 100%;
+  margin-left:0rem;
+  background:lightblue;
+  font-size: 3.5rem;
+  height:8rem;
+  padding: 1.5rem;
+}
+.row{
+  display:flex;
+  justify-content: center;
+  padding-top: 2rem;
+ 
+  
+}
+.co6{
+  width:50%;
+  margin:auto;
+  text-align: center;
+  font-size: 1.7rem;
+  
+
+}
+.grey{
+  background: lightgray;
+  height:35rem;
+}
+.grey1{
+  background: lightgray;
+  border-radius: .4rem;
+  color:white;
+}
+.gre{
+  background-color: green;
+  border-radius: .3rem;
+  padding:.52rem;
+}
