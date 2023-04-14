@@ -1,27 +1,39 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 const Register=(props)=>{
+    let histroy=useNavigate();
     const [data,setData]=useState(
         {
             Firstname:"",
             Lastname:"",
-            mail:"",
+            email:"",
             password:""
         }
         
     )
     const handleChange=(e)=>{
         setData({ ...data, [e.target.name]:e.target.value});
-        console.log(data)
+        // console.log(data)
     }
     const submitForm=(e)=>{
         e.preventDefault();
         const sendData={
             Firstname:data.Firstname,
             Lastname:data.Lastname,
-            email:data.Email,
+            email:data.email,
             password:data.password
         }
         console.log(sendData);
+        axios.post('http://localhost/Loginform/insert.php',sendData).then((result)=>{
+            if(result.data.Status === 'invalid'){
+            alert("invalid user");}
+            else{
+                histroy('/dashboard')
+            }
+            
+        })
     }
     return (
         <div className='grey'>
@@ -49,7 +61,7 @@ const Register=(props)=>{
                      E-mail
                 </div>
                 <div className='co6'>
-                    <input type="email" name="Email"class="grey1" onChange={handleChange} value={data.mail}/>
+                    <input type="email" name="email"class="grey1" onChange={handleChange} value={data.email}/>
                 </div>
             </div>
             <div className='row'>
@@ -63,7 +75,7 @@ const Register=(props)=>{
             <div className='row'>
                 
                 <div className='co6 '>
-                    <input type="submit" name="submit"class="grey1 gre"/>
+                    <input type="submit" name="submit"valu="register"class="grey1 gre"/>
                 
                 </div>
                 
